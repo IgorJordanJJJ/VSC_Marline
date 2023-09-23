@@ -1,10 +1,13 @@
 package jordan.grup.VSK_Marlin.models;
 
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Table(name="Person")
@@ -26,6 +29,10 @@ public class Person {
 
     @Column(name = "role")
     private String role;
+
+    @OneToMany(mappedBy = "userowner")
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    private List<Application> applications;
     public Person(){
     }
 
@@ -65,6 +72,14 @@ public class Person {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Application> getApplications() {
+        return applications;
+    }
+
+    public void setApplications(List<Application> applications) {
+        this.applications = applications;
     }
 
     @Override
