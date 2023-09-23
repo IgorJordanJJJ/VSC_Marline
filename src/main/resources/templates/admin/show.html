@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>User</h1>
+<div class="item-show">
+    <div class="text-item-descr">UserName:</div>
+    <p class="text-item" th:text="${user.getUsername()}">UserName</p>
+</div>
+<div class="item-show">
+    <div class="text-item-descr">Role:</div>
+    <p class="text-item" th:text="${user.getRole()}">Role</p>
+</div>
+<div class="item-show">
+    <div class="text-item-descr">Password:</div>
+    <p class="text-item" th:text="${user.getPassword()}">Password</p>
+</div>
+<dev class="buttum-wrapper">
+    <form th:method="DELETE" th:action="@{/admin/{id}(id=${user.getId()})}">
+        <input class="buttum" type="submit" value="Delete!">
+    </form>
+    <form th:method="GET" th:action="@{/admin/user/{id}/edit(id=${user.getId()})}">
+        <input class="buttum" type="submit" value="Edit!">
+    </form>
+</dev>
+</body>
+</html>
