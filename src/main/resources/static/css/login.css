@@ -1,0 +1,56 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #007bff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    color: #fff;
+    text-align: center; /* Центрирование текста внутри контейнера */
+    box-sizing: border-box; /* Учитываем отступы и границы внутри размеров контейнера */
+}
+
+form {
+    width: 100%;
+    text-align: left; /* Выравнивание текста внутри формы по левому краю */
+}
+
+/* Добавьте следующие стили для полей ввода */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box; /* Учитываем отступы и границы внутри размеров поля ввода */
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #003c80;
+}
+
+.error-message {
+    color: red;
+}
