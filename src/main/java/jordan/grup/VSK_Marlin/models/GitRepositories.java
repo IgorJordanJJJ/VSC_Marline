@@ -41,11 +41,6 @@ public class GitRepositories {
     }
 
 
-    public GitRepositories(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
     public Application getApplication() {
         return application;
     }
@@ -53,6 +48,12 @@ public class GitRepositories {
     public void setApplication(Application application) {
         this.application = application;
     }
+
+    public GitRepositories(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
 
     public int getId() {
         return id;

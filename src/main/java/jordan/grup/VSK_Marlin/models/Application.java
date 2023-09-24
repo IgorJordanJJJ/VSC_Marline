@@ -25,23 +25,18 @@ public class Application {
     @Column(name = "name")
     private String name;
 
-    @Id
     @OneToOne
     @JoinColumn(name = "id_gitrepository", referencedColumnName = "id")
     private GitRepositories gitRepositories;
 
-    @Id
     @OneToOne
-    @JoinColumn(name = "id_CI_CD", referencedColumnName = "id")
+    @JoinColumn(name = "id_ci_cd", referencedColumnName = "id")
     private CICDDeployment cicdDeployment;
 
     public Application() {
     }
 
-    public Application(int id, Person userowner) {
-        this.id = id;
-        this.userowner = userowner;
-    }
+
 
     public int getId() {
         return id;

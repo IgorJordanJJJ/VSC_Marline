@@ -32,6 +32,7 @@ public class CICDDeployment {
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private Application application;
 
+
     public Application getApplication() {
         return application;
     }
