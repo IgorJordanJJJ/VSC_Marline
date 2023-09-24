@@ -48,4 +48,10 @@ public class PersonDetailsService implements UserDetailsService {
         personRepository.deleteById(id);
     }
 
+    public Person findByname(String name){
+        Optional<Person> foundperson=  personRepository.findByUsername(name);
+        return foundperson.orElse(null);
+    }
+
+
 }

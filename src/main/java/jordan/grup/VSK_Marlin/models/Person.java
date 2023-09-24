@@ -36,6 +36,10 @@ public class Person {
     public Person(){
     }
 
+    public Person(int id) {
+        this.id = id;
+    }
+
     public Person(String username) {
         this.username = username;
 
